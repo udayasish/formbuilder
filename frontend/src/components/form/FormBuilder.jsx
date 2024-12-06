@@ -181,10 +181,15 @@ function FormBuilder() {
     setIsSubmittingForm(true); 
   
     try {
-      const response = await fetch("http://localhost:8000/api/v1/forms", {
+      const response = await fetch("https://formbuilder-backend-9z5u.onrender.com/api/v1/forms", {
         method: "POST",
         body: formData,
       });
+    // try {
+    //   const response = await fetch("http://localhost:8000/api/v1/forms", {
+    //     method: "POST",
+    //     body: formData,
+    //   });
      
       
   
@@ -255,7 +260,7 @@ function FormBuilder() {
         return;
       }
   
-      const response = await fetch("http://localhost:8000/api/v1/responses", {
+      const response = await fetch("https://formbuilder-backend-9z5u.onrender.com/api/v1/responses", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
